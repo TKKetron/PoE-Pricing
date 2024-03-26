@@ -32,7 +32,18 @@ namespace POE_Pricing
 
             Einhar_Memory_Calc.GetMemoryValue();
 
+            InitializeMainMenu();
+            //InitializeHandlers();
+
         }
+
+        public void InitializeMainMenu()
+        {
+            panelPriceChecking.Visible = false;
+            panelMoneyStrats.Visible = false;
+            panelExit.Visible = false;
+        }
+
         /// <summary>
         /// Pull from the poe ninja API for a given type
         /// </summary>
@@ -96,23 +107,64 @@ namespace POE_Pricing
                 }
             }
         }
-        /*
-        public void WriteItemsToFile(string filePath)
+
+        private void buttonPriceChecking_Click(object sender, EventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(filePath))
-            {
-                foreach (var kvp in items)
-                {
-                    writer.WriteLine($"Items for type '{kvp.Key}':");
-                    foreach (var item in kvp.Value.Values)
-                    {
-                        string itemName = item.name.Length > STR_LEN ? item.name.Substring(0, STR_LEN) : item.name;
-                        writer.WriteLine($"Item Name: {itemName.PadRight(STR_LEN + 5)}Chaos Value: {item.chaosValue.ToString().PadRight(10)}Divine Value: {item.divineValue}");
-                    }
-                    writer.WriteLine();
-                }
-            }
+            panelPriceChecking.Visible = !panelPriceChecking.Visible;
         }
-        */
+
+        private void buttonMoneyStrats_Click(object sender, EventArgs e)
+        {
+            panelMoneyStrats.Visible = !panelMoneyStrats.Visible;
+        }
+
+        private void buttonHervestMemory_Click(object sender, EventArgs e)
+        {
+            openChildForm(new HarvestMemoryForm(this), "HarvestMemory");
+        }
+
+        private Dictionary<string,Form> activeForms = new Dictionary<string, Form>();
+        private string activeForm = "";
+        private void openChildForm(Form childForm, string type)
+        {
+            if (!activeForms.ContainsKey(type))
+                activeForms[type] = childForm;
+            else
+                childForm.Close();
+            activeForm = type;
+            activeForms[type].TopLevel = false;
+            activeForms[type].FormBorderStyle = FormBorderStyle.None;
+            activeForms[type].Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(activeForms[type]);
+            panelChildForm.Tag = activeForms[type];
+            activeForms[type].BringToFront();
+            activeForms[type].Show();
+        }
+
+        public void closeTopForm()
+        {
+            activeForms[activeForm].Close();
+            activeForms.Remove(activeForm);
+        }
+
+        #region Exit
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            panelExit.Visible = !panelExit.Visible;
+            if (panelMenu.AutoScroll && panelExit.Visible)
+                panelMenu.ScrollControlIntoView(panelExit);
+        }
+
+        private void buttonExitWithoutSaving_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonSaveAndExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion
+
     }
 }
