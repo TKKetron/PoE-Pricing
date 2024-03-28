@@ -52,6 +52,7 @@
             buttonTemple = new Button();
             buttonCrafting = new Button();
             buttonMisc = new Button();
+            buttonInvesting = new Button();
             panelMain.SuspendLayout();
             panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
@@ -325,6 +326,7 @@
             // panelPriceChecking
             // 
             panelPriceChecking.BackColor = Color.FromArgb(51, 51, 51);
+            panelPriceChecking.Controls.Add(buttonInvesting);
             panelPriceChecking.Controls.Add(buttonItems);
             panelPriceChecking.Dock = DockStyle.Top;
             panelPriceChecking.Location = new Point(0, 70);
@@ -476,6 +478,27 @@
             buttonMisc.TextAlign = ContentAlignment.MiddleLeft;
             buttonMisc.UseVisualStyleBackColor = true;
             // 
+            // buttonInvesting
+            // 
+            buttonInvesting.Dock = DockStyle.Top;
+            buttonInvesting.FlatAppearance.BorderSize = 0;
+            buttonInvesting.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonInvesting.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonInvesting.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonInvesting.FlatStyle = FlatStyle.Flat;
+            buttonInvesting.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonInvesting.ForeColor = Color.LightGray;
+            buttonInvesting.Location = new Point(0, 55);
+            buttonInvesting.Margin = new Padding(5);
+            buttonInvesting.Name = "buttonInvesting";
+            buttonInvesting.Padding = new Padding(47, 0, 0, 0);
+            buttonInvesting.Size = new Size(255, 55);
+            buttonInvesting.TabIndex = 8;
+            buttonInvesting.Text = "Items";
+            buttonInvesting.TextAlign = ContentAlignment.MiddleLeft;
+            buttonInvesting.UseVisualStyleBackColor = true;
+            buttonInvesting.Click += buttonInvesting_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -533,5 +556,6 @@
         private Button buttonArbitrage;
         private Button buttonBeasts;
         private Button buttonMisc;
+        private Button buttonInvesting;
     }
 }

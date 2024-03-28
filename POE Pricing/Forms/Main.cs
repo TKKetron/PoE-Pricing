@@ -22,12 +22,12 @@ namespace POE_Pricing
 
             await Task.WhenAll(tasks);
 
-            DivineValue = items["Currency"]["Divine Orb"].chaosValue; //set the divine value
+            DivineValue = itemsByName["Currency"]["Divine Orb"].chaosValue; //set the divine value
 
-            foreach (var item in items["Currency"])
+            foreach (var item in itemsByName["Currency"])
                 item.Value.divineValue = item.Value.chaosValue / DivineValue;
 
-            foreach (var item in items["Fragment"])
+            foreach (var item in itemsByName["Fragment"])
                 item.Value.divineValue = item.Value.chaosValue / DivineValue;
 
             Einhar_Memory_Calc.GetMemoryValue();
@@ -77,6 +77,7 @@ namespace POE_Pricing
                         if (itemsList != null)
                         {
                             Dictionary<string, Item> itemsDict = new Dictionary<string, Item>();
+                            Dictionary<int, Item> itemsDictID = new Dictionary<int, Item>();
 
                             if (cur)
                             {
@@ -93,10 +94,12 @@ namespace POE_Pricing
                             foreach (var item in itemsList)
                             {
                                 itemsDict[item.name] = item;
+                                itemsDictID[item.id] = item;
                             }
-                            lock (items)
+                            lock (itemsByName)
                             {
-                                items[type] = itemsDict;
+                                itemsByName[type] = itemsDict;
+                                itemsByID[type] = itemsDictID;
                             }
                         }
                     }
@@ -123,7 +126,7 @@ namespace POE_Pricing
             openChildForm(new HarvestMemoryForm(this), "HarvestMemory");
         }
 
-        private Dictionary<string,Form> activeForms = new Dictionary<string, Form>();
+        private Dictionary<string, Form> activeForms = new Dictionary<string, Form>();
         private string activeForm = "";
         private void openChildForm(Form childForm, string type)
         {
@@ -166,5 +169,10 @@ namespace POE_Pricing
         }
         #endregion
 
+        private void buttonInvesting_Click(object sender, EventArgs e)
+        {
+            openChildForm(new InvestForm(this), "Invest");
+
+        }
     }
 }

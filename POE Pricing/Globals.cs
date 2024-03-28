@@ -8,7 +8,7 @@ namespace POE_Pricing
 {
     internal static class Globals
     {
-        public const string LEAGUE = "Affliction";
+        public const string LEAGUE = "Standard";
         public static float DivineValue;
         public static readonly string[] TYPES =
         {
@@ -44,7 +44,8 @@ namespace POE_Pricing
             "Vial"
         };
 
-        public static Dictionary<string, Dictionary<string, Item>> items = new Dictionary<string, Dictionary<string, Item>>();
+        public static Dictionary<string, Dictionary<string, Item>> itemsByName = new Dictionary<string, Dictionary<string, Item>>();
+        public static Dictionary<string, Dictionary<int, Item>> itemsByID = new Dictionary<string, Dictionary<int, Item>>();
 
         public class Item : IComparable<Item>
         {
@@ -58,7 +59,7 @@ namespace POE_Pricing
             public float chaosEquivalent { get; set; }
             public float exaltedValue { get; set; }
             public float divineValue { get; set; }
-            public float listingCount { get; set; }
+            public int listingCount { get; set; }
 
             public int CompareTo(Item other)
             {
