@@ -30,6 +30,19 @@ namespace POE_Pricing
             foreach (var item in itemsByName["Fragment"])
                 item.Value.divineValue = item.Value.chaosValue / DivineValue;
 
+            itemsByName["Currency"]["Divine Orb"].icon = "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png";
+            itemsByName["Currency"]["Chaos Orb"] = new Item()
+            {
+                icon = "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSZXJvbGxSYXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d119a0d734/CurrencyRerollRare.png",
+                name = "Chaos Orb",
+                baseType = "Currency",
+                ItemClass = 0,
+                chaosEquivalent = 1,
+                chaosValue = 1,
+                divineValue = DivineValue
+            };
+
+
             Einhar_Memory_Calc.GetMemoryValue();
 
             InitializeMainMenu();

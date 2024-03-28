@@ -30,14 +30,15 @@
         {
             SuspendLayout();
             // 
-            // HarvestMemoryForm
+            // ArbitrageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1405, 877);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "HarvestMemoryForm";
+            Name = "ArbitrageForm";
             Text = "HarvestMemoryForm";
+            Load += ArbitrageForm_Load;
             ResumeLayout(false);
         }
 
