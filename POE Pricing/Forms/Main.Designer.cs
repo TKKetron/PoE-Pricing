@@ -42,17 +42,17 @@
             buttonSettings = new Button();
             buttonHelp = new Button();
             panelMoneyStrats = new Panel();
+            buttonMisc = new Button();
+            buttonCrafting = new Button();
+            buttonTemple = new Button();
+            buttonArbitrage = new Button();
+            buttonBeasts = new Button();
             buttonHervestMemory = new Button();
             buttonMoneyStrats = new Button();
             panelPriceChecking = new Panel();
+            buttonInvesting = new Button();
             buttonItems = new Button();
             buttonPriceChecking = new Button();
-            buttonBeasts = new Button();
-            buttonArbitrage = new Button();
-            buttonTemple = new Button();
-            buttonCrafting = new Button();
-            buttonMisc = new Button();
-            buttonInvesting = new Button();
             panelMain.SuspendLayout();
             panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
@@ -279,6 +279,107 @@
             panelMoneyStrats.Size = new Size(255, 330);
             panelMoneyStrats.TabIndex = 4;
             // 
+            // buttonMisc
+            // 
+            buttonMisc.Dock = DockStyle.Top;
+            buttonMisc.FlatAppearance.BorderSize = 0;
+            buttonMisc.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonMisc.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonMisc.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonMisc.FlatStyle = FlatStyle.Flat;
+            buttonMisc.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonMisc.ForeColor = Color.LightGray;
+            buttonMisc.Location = new Point(0, 275);
+            buttonMisc.Margin = new Padding(5);
+            buttonMisc.Name = "buttonMisc";
+            buttonMisc.Padding = new Padding(47, 0, 0, 0);
+            buttonMisc.Size = new Size(255, 55);
+            buttonMisc.TabIndex = 7;
+            buttonMisc.Text = "Misc";
+            buttonMisc.TextAlign = ContentAlignment.MiddleLeft;
+            buttonMisc.UseVisualStyleBackColor = true;
+            // 
+            // buttonCrafting
+            // 
+            buttonCrafting.Dock = DockStyle.Top;
+            buttonCrafting.FlatAppearance.BorderSize = 0;
+            buttonCrafting.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonCrafting.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonCrafting.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonCrafting.FlatStyle = FlatStyle.Flat;
+            buttonCrafting.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonCrafting.ForeColor = Color.LightGray;
+            buttonCrafting.Location = new Point(0, 220);
+            buttonCrafting.Margin = new Padding(5);
+            buttonCrafting.Name = "buttonCrafting";
+            buttonCrafting.Padding = new Padding(47, 0, 0, 0);
+            buttonCrafting.Size = new Size(255, 55);
+            buttonCrafting.TabIndex = 6;
+            buttonCrafting.Text = "Crafting";
+            buttonCrafting.TextAlign = ContentAlignment.MiddleLeft;
+            buttonCrafting.UseVisualStyleBackColor = true;
+            // 
+            // buttonTemple
+            // 
+            buttonTemple.Dock = DockStyle.Top;
+            buttonTemple.FlatAppearance.BorderSize = 0;
+            buttonTemple.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonTemple.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonTemple.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonTemple.FlatStyle = FlatStyle.Flat;
+            buttonTemple.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonTemple.ForeColor = Color.LightGray;
+            buttonTemple.Location = new Point(0, 165);
+            buttonTemple.Margin = new Padding(5);
+            buttonTemple.Name = "buttonTemple";
+            buttonTemple.Padding = new Padding(47, 0, 0, 0);
+            buttonTemple.Size = new Size(255, 55);
+            buttonTemple.TabIndex = 5;
+            buttonTemple.Text = "Temples";
+            buttonTemple.TextAlign = ContentAlignment.MiddleLeft;
+            buttonTemple.UseVisualStyleBackColor = true;
+            // 
+            // buttonArbitrage
+            // 
+            buttonArbitrage.Dock = DockStyle.Top;
+            buttonArbitrage.FlatAppearance.BorderSize = 0;
+            buttonArbitrage.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonArbitrage.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonArbitrage.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonArbitrage.FlatStyle = FlatStyle.Flat;
+            buttonArbitrage.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonArbitrage.ForeColor = Color.LightGray;
+            buttonArbitrage.Location = new Point(0, 110);
+            buttonArbitrage.Margin = new Padding(5);
+            buttonArbitrage.Name = "buttonArbitrage";
+            buttonArbitrage.Padding = new Padding(47, 0, 0, 0);
+            buttonArbitrage.Size = new Size(255, 55);
+            buttonArbitrage.TabIndex = 4;
+            buttonArbitrage.Text = "Arbitrage";
+            buttonArbitrage.TextAlign = ContentAlignment.MiddleLeft;
+            buttonArbitrage.UseVisualStyleBackColor = true;
+            buttonArbitrage.Click += buttonArbitrage_Click;
+            // 
+            // buttonBeasts
+            // 
+            buttonBeasts.Dock = DockStyle.Top;
+            buttonBeasts.FlatAppearance.BorderSize = 0;
+            buttonBeasts.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonBeasts.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonBeasts.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonBeasts.FlatStyle = FlatStyle.Flat;
+            buttonBeasts.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonBeasts.ForeColor = Color.LightGray;
+            buttonBeasts.Location = new Point(0, 55);
+            buttonBeasts.Margin = new Padding(5);
+            buttonBeasts.Name = "buttonBeasts";
+            buttonBeasts.Padding = new Padding(47, 0, 0, 0);
+            buttonBeasts.Size = new Size(255, 55);
+            buttonBeasts.TabIndex = 3;
+            buttonBeasts.Text = "Beasts";
+            buttonBeasts.TextAlign = ContentAlignment.MiddleLeft;
+            buttonBeasts.UseVisualStyleBackColor = true;
+            // 
             // buttonHervestMemory
             // 
             buttonHervestMemory.Dock = DockStyle.Top;
@@ -335,6 +436,27 @@
             panelPriceChecking.Size = new Size(255, 219);
             panelPriceChecking.TabIndex = 2;
             // 
+            // buttonInvesting
+            // 
+            buttonInvesting.Dock = DockStyle.Top;
+            buttonInvesting.FlatAppearance.BorderSize = 0;
+            buttonInvesting.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonInvesting.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonInvesting.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonInvesting.FlatStyle = FlatStyle.Flat;
+            buttonInvesting.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonInvesting.ForeColor = Color.LightGray;
+            buttonInvesting.Location = new Point(0, 55);
+            buttonInvesting.Margin = new Padding(5);
+            buttonInvesting.Name = "buttonInvesting";
+            buttonInvesting.Padding = new Padding(47, 0, 0, 0);
+            buttonInvesting.Size = new Size(255, 55);
+            buttonInvesting.TabIndex = 8;
+            buttonInvesting.Text = "Invest";
+            buttonInvesting.TextAlign = ContentAlignment.MiddleLeft;
+            buttonInvesting.UseVisualStyleBackColor = true;
+            buttonInvesting.Click += buttonInvesting_Click;
+            // 
             // buttonItems
             // 
             buttonItems.Dock = DockStyle.Top;
@@ -377,127 +499,6 @@
             buttonPriceChecking.TextAlign = ContentAlignment.MiddleLeft;
             buttonPriceChecking.UseVisualStyleBackColor = false;
             buttonPriceChecking.Click += buttonPriceChecking_Click;
-            // 
-            // buttonBeasts
-            // 
-            buttonBeasts.Dock = DockStyle.Top;
-            buttonBeasts.FlatAppearance.BorderSize = 0;
-            buttonBeasts.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
-            buttonBeasts.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
-            buttonBeasts.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
-            buttonBeasts.FlatStyle = FlatStyle.Flat;
-            buttonBeasts.Font = new Font("MrsEavesSmallCaps", 12F);
-            buttonBeasts.ForeColor = Color.LightGray;
-            buttonBeasts.Location = new Point(0, 55);
-            buttonBeasts.Margin = new Padding(5);
-            buttonBeasts.Name = "buttonBeasts";
-            buttonBeasts.Padding = new Padding(47, 0, 0, 0);
-            buttonBeasts.Size = new Size(255, 55);
-            buttonBeasts.TabIndex = 3;
-            buttonBeasts.Text = "Beasts";
-            buttonBeasts.TextAlign = ContentAlignment.MiddleLeft;
-            buttonBeasts.UseVisualStyleBackColor = true;
-            // 
-            // buttonArbitrage
-            // 
-            buttonArbitrage.Dock = DockStyle.Top;
-            buttonArbitrage.FlatAppearance.BorderSize = 0;
-            buttonArbitrage.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
-            buttonArbitrage.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
-            buttonArbitrage.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
-            buttonArbitrage.FlatStyle = FlatStyle.Flat;
-            buttonArbitrage.Font = new Font("MrsEavesSmallCaps", 12F);
-            buttonArbitrage.ForeColor = Color.LightGray;
-            buttonArbitrage.Location = new Point(0, 110);
-            buttonArbitrage.Margin = new Padding(5);
-            buttonArbitrage.Name = "buttonArbitrage";
-            buttonArbitrage.Padding = new Padding(47, 0, 0, 0);
-            buttonArbitrage.Size = new Size(255, 55);
-            buttonArbitrage.TabIndex = 4;
-            buttonArbitrage.Text = "Arbitrage";
-            buttonArbitrage.TextAlign = ContentAlignment.MiddleLeft;
-            buttonArbitrage.UseVisualStyleBackColor = true;
-            // 
-            // buttonTemple
-            // 
-            buttonTemple.Dock = DockStyle.Top;
-            buttonTemple.FlatAppearance.BorderSize = 0;
-            buttonTemple.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
-            buttonTemple.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
-            buttonTemple.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
-            buttonTemple.FlatStyle = FlatStyle.Flat;
-            buttonTemple.Font = new Font("MrsEavesSmallCaps", 12F);
-            buttonTemple.ForeColor = Color.LightGray;
-            buttonTemple.Location = new Point(0, 165);
-            buttonTemple.Margin = new Padding(5);
-            buttonTemple.Name = "buttonTemple";
-            buttonTemple.Padding = new Padding(47, 0, 0, 0);
-            buttonTemple.Size = new Size(255, 55);
-            buttonTemple.TabIndex = 5;
-            buttonTemple.Text = "Temples";
-            buttonTemple.TextAlign = ContentAlignment.MiddleLeft;
-            buttonTemple.UseVisualStyleBackColor = true;
-            // 
-            // buttonCrafting
-            // 
-            buttonCrafting.Dock = DockStyle.Top;
-            buttonCrafting.FlatAppearance.BorderSize = 0;
-            buttonCrafting.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
-            buttonCrafting.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
-            buttonCrafting.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
-            buttonCrafting.FlatStyle = FlatStyle.Flat;
-            buttonCrafting.Font = new Font("MrsEavesSmallCaps", 12F);
-            buttonCrafting.ForeColor = Color.LightGray;
-            buttonCrafting.Location = new Point(0, 220);
-            buttonCrafting.Margin = new Padding(5);
-            buttonCrafting.Name = "buttonCrafting";
-            buttonCrafting.Padding = new Padding(47, 0, 0, 0);
-            buttonCrafting.Size = new Size(255, 55);
-            buttonCrafting.TabIndex = 6;
-            buttonCrafting.Text = "Crafting";
-            buttonCrafting.TextAlign = ContentAlignment.MiddleLeft;
-            buttonCrafting.UseVisualStyleBackColor = true;
-            // 
-            // buttonMisc
-            // 
-            buttonMisc.Dock = DockStyle.Top;
-            buttonMisc.FlatAppearance.BorderSize = 0;
-            buttonMisc.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
-            buttonMisc.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
-            buttonMisc.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
-            buttonMisc.FlatStyle = FlatStyle.Flat;
-            buttonMisc.Font = new Font("MrsEavesSmallCaps", 12F);
-            buttonMisc.ForeColor = Color.LightGray;
-            buttonMisc.Location = new Point(0, 275);
-            buttonMisc.Margin = new Padding(5);
-            buttonMisc.Name = "buttonMisc";
-            buttonMisc.Padding = new Padding(47, 0, 0, 0);
-            buttonMisc.Size = new Size(255, 55);
-            buttonMisc.TabIndex = 7;
-            buttonMisc.Text = "Misc";
-            buttonMisc.TextAlign = ContentAlignment.MiddleLeft;
-            buttonMisc.UseVisualStyleBackColor = true;
-            // 
-            // buttonInvesting
-            // 
-            buttonInvesting.Dock = DockStyle.Top;
-            buttonInvesting.FlatAppearance.BorderSize = 0;
-            buttonInvesting.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
-            buttonInvesting.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
-            buttonInvesting.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
-            buttonInvesting.FlatStyle = FlatStyle.Flat;
-            buttonInvesting.Font = new Font("MrsEavesSmallCaps", 12F);
-            buttonInvesting.ForeColor = Color.LightGray;
-            buttonInvesting.Location = new Point(0, 55);
-            buttonInvesting.Margin = new Padding(5);
-            buttonInvesting.Name = "buttonInvesting";
-            buttonInvesting.Padding = new Padding(47, 0, 0, 0);
-            buttonInvesting.Size = new Size(255, 55);
-            buttonInvesting.TabIndex = 8;
-            buttonInvesting.Text = "Items";
-            buttonInvesting.TextAlign = ContentAlignment.MiddleLeft;
-            buttonInvesting.UseVisualStyleBackColor = true;
-            buttonInvesting.Click += buttonInvesting_Click;
             // 
             // Main
             // 

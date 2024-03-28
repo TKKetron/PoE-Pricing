@@ -174,5 +174,10 @@ namespace POE_Pricing
             openChildForm(new InvestForm(this), "Invest");
 
         }
+
+        private void buttonArbitrage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
