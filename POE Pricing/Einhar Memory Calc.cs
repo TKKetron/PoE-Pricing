@@ -14,16 +14,16 @@ namespace POE_Pricing
         {
             float valueB, valueM, valueS, value;
 
-            valueB = items["Beast"]["Vivid Watcher"].chaosValue + items["Beast"]["Vivid Vulture"].chaosValue + items["Beast"]["Vivid Abberarach"].chaosValue +
-                items["Beast"]["Wild Bristle Matron"].chaosValue + items["Beast"]["Wild Hellion Alpha"].chaosValue + items["Beast"]["Wild Brambleback"].chaosValue +
-                items["Beast"]["Primal Rhex Matriarch"].chaosValue + items["Beast"]["Primal Cystcaller"].chaosValue + items["Beast"]["Primal Crushclaw"].chaosValue;
-            valueM = items["Memory"]["Einhar's Memory of Harvest Beasts"].chaosValue;
+            valueB = itemsByName["Beast"]["Vivid Watcher"].chaosValue + itemsByName["Beast"]["Vivid Vulture"].chaosValue + itemsByName["Beast"]["Vivid Abberarach"].chaosValue +
+                itemsByName["Beast"]["Wild Bristle Matron"].chaosValue + itemsByName["Beast"]["Wild Hellion Alpha"].chaosValue + itemsByName["Beast"]["Wild Brambleback"].chaosValue +
+                itemsByName["Beast"]["Primal Rhex Matriarch"].chaosValue + itemsByName["Beast"]["Primal Cystcaller"].chaosValue + itemsByName["Beast"]["Primal Crushclaw"].chaosValue;
+            valueM = itemsByName["Memory"]["Einhar's Memory of Harvest Beasts"].chaosValue;
             value = valueB - valueM;
-            valueS = items["UniqueMap"]["Augmented Distant Memory"].chaosValue + items["UniqueMap"]["Twisted Distant Memory"].chaosValue +
-                items["UniqueMap"]["Altered Distant Memory"].chaosValue + items["UniqueMap"]["Rewritten Distant Memory"].chaosValue
-                + items["UniqueMap"]["Cortex"].chaosValue;
+            valueS = itemsByName["UniqueMap"]["Augmented Distant Memory"].chaosValue + itemsByName["UniqueMap"]["Twisted Distant Memory"].chaosValue +
+                itemsByName["UniqueMap"]["Altered Distant Memory"].chaosValue + itemsByName["UniqueMap"]["Rewritten Distant Memory"].chaosValue
+                + itemsByName["UniqueMap"]["Cortex"].chaosValue;
 
-            value = value - items["Beast"]["Primal Rhex Matriarch"].chaosValue + (.2f * valueS);
+            value = value - itemsByName["Beast"]["Primal Rhex Matriarch"].chaosValue + (.2f * valueS);
 
 
 
