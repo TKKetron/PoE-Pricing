@@ -44,12 +44,12 @@
             labelPerPlayerProfitOutput = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
             panelHarvest = new Panel();
-            labelPlayerProfitOutput = new Label();
-            labelPlayerProfit = new Label();
+            labelExtraPlayers = new Label();
+            numericUpDownExtraPlayers = new NumericUpDown();
             labelTotalProfitOutput = new Label();
             labelTotalProfit = new Label();
-            numericUpDownExtraPlayers = new NumericUpDown();
-            labelExtraPlayers = new Label();
+            labelPlayerProfitOutput = new Label();
+            labelPlayerProfit = new Label();
             panelHarvest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownExtraPlayers).BeginInit();
             SuspendLayout();
@@ -61,8 +61,10 @@
             checkBoxVividVulture.Name = "checkBoxVividVulture";
             checkBoxVividVulture.Size = new Size(93, 19);
             checkBoxVividVulture.TabIndex = 0;
+            checkBoxVividVulture.Tag = "0";
             checkBoxVividVulture.Text = "Vivid Vulture";
             checkBoxVividVulture.UseVisualStyleBackColor = true;
+            checkBoxVividVulture.CheckedChanged += UpdateValues;
             // 
             // checkBoxPrimalCrushclaw
             // 
@@ -71,8 +73,10 @@
             checkBoxPrimalCrushclaw.Name = "checkBoxPrimalCrushclaw";
             checkBoxPrimalCrushclaw.Size = new Size(118, 19);
             checkBoxPrimalCrushclaw.TabIndex = 1;
+            checkBoxPrimalCrushclaw.Tag = "8";
             checkBoxPrimalCrushclaw.Text = "Primal Crushclaw";
             checkBoxPrimalCrushclaw.UseVisualStyleBackColor = true;
+            checkBoxPrimalCrushclaw.CheckedChanged += UpdateValues;
             // 
             // checkBoxPrimalCystcaller
             // 
@@ -81,8 +85,10 @@
             checkBoxPrimalCystcaller.Name = "checkBoxPrimalCystcaller";
             checkBoxPrimalCystcaller.Size = new Size(114, 19);
             checkBoxPrimalCystcaller.TabIndex = 2;
+            checkBoxPrimalCystcaller.Tag = "7";
             checkBoxPrimalCystcaller.Text = "Primal Cystcaller";
             checkBoxPrimalCystcaller.UseVisualStyleBackColor = true;
+            checkBoxPrimalCystcaller.CheckedChanged += UpdateValues;
             // 
             // checkBoxPrimalRhexMatriarch
             // 
@@ -91,8 +97,10 @@
             checkBoxPrimalRhexMatriarch.Name = "checkBoxPrimalRhexMatriarch";
             checkBoxPrimalRhexMatriarch.Size = new Size(143, 19);
             checkBoxPrimalRhexMatriarch.TabIndex = 3;
+            checkBoxPrimalRhexMatriarch.Tag = "6";
             checkBoxPrimalRhexMatriarch.Text = "Primal Rhex Matriarch";
             checkBoxPrimalRhexMatriarch.UseVisualStyleBackColor = true;
+            checkBoxPrimalRhexMatriarch.CheckedChanged += UpdateValues;
             // 
             // checkBoxWildBrambleback
             // 
@@ -101,8 +109,10 @@
             checkBoxWildBrambleback.Name = "checkBoxWildBrambleback";
             checkBoxWildBrambleback.Size = new Size(122, 19);
             checkBoxWildBrambleback.TabIndex = 4;
+            checkBoxWildBrambleback.Tag = "5";
             checkBoxWildBrambleback.Text = "Wild Brambleback";
             checkBoxWildBrambleback.UseVisualStyleBackColor = true;
+            checkBoxWildBrambleback.CheckedChanged += UpdateValues;
             // 
             // checkBoxWildHellionAlpha
             // 
@@ -111,8 +121,10 @@
             checkBoxWildHellionAlpha.Name = "checkBoxWildHellionAlpha";
             checkBoxWildHellionAlpha.Size = new Size(125, 19);
             checkBoxWildHellionAlpha.TabIndex = 5;
+            checkBoxWildHellionAlpha.Tag = "4";
             checkBoxWildHellionAlpha.Text = "Wild Hellion Alpha";
             checkBoxWildHellionAlpha.UseVisualStyleBackColor = true;
+            checkBoxWildHellionAlpha.CheckedChanged += UpdateValues;
             // 
             // checkBoxWildBristleMatron
             // 
@@ -121,8 +133,10 @@
             checkBoxWildBristleMatron.Name = "checkBoxWildBristleMatron";
             checkBoxWildBristleMatron.Size = new Size(127, 19);
             checkBoxWildBristleMatron.TabIndex = 6;
+            checkBoxWildBristleMatron.Tag = "3";
             checkBoxWildBristleMatron.Text = "Wild Bristle Matron";
             checkBoxWildBristleMatron.UseVisualStyleBackColor = true;
+            checkBoxWildBristleMatron.CheckedChanged += UpdateValues;
             // 
             // checkBoxVividAbberach
             // 
@@ -131,8 +145,10 @@
             checkBoxVividAbberach.Name = "checkBoxVividAbberach";
             checkBoxVividAbberach.Size = new Size(106, 19);
             checkBoxVividAbberach.TabIndex = 7;
+            checkBoxVividAbberach.Tag = "2";
             checkBoxVividAbberach.Text = "Vivid Abberach";
             checkBoxVividAbberach.UseVisualStyleBackColor = true;
+            checkBoxVividAbberach.CheckedChanged += UpdateValues;
             // 
             // checkBoxVividWatcher
             // 
@@ -141,8 +157,10 @@
             checkBoxVividWatcher.Name = "checkBoxVividWatcher";
             checkBoxVividWatcher.Size = new Size(99, 19);
             checkBoxVividWatcher.TabIndex = 8;
+            checkBoxVividWatcher.Tag = "1";
             checkBoxVividWatcher.Text = "Vivid Watcher";
             checkBoxVividWatcher.UseVisualStyleBackColor = true;
+            checkBoxVividWatcher.CheckedChanged += UpdateValues;
             // 
             // labelHostProfit
             // 
@@ -217,26 +235,22 @@
             panelHarvest.Size = new Size(1405, 877);
             panelHarvest.TabIndex = 14;
             // 
-            // labelPlayerProfitOutput
+            // labelExtraPlayers
             // 
-            labelPlayerProfitOutput.BackColor = SystemColors.Window;
-            labelPlayerProfitOutput.BorderStyle = BorderStyle.FixedSingle;
-            labelPlayerProfitOutput.Location = new Point(330, 194);
-            labelPlayerProfitOutput.Margin = new Padding(3);
-            labelPlayerProfitOutput.Name = "labelPlayerProfitOutput";
-            labelPlayerProfitOutput.Size = new Size(100, 23);
-            labelPlayerProfitOutput.TabIndex = 15;
-            labelPlayerProfitOutput.Text = "0.00";
-            labelPlayerProfitOutput.TextAlign = ContentAlignment.MiddleLeft;
+            labelExtraPlayers.AutoSize = true;
+            labelExtraPlayers.Location = new Point(501, 23);
+            labelExtraPlayers.Name = "labelExtraPlayers";
+            labelExtraPlayers.Size = new Size(73, 15);
+            labelExtraPlayers.TabIndex = 19;
+            labelExtraPlayers.Text = "Extra Players";
             // 
-            // labelPlayerProfit
+            // numericUpDownExtraPlayers
             // 
-            labelPlayerProfit.AutoSize = true;
-            labelPlayerProfit.Location = new Point(330, 173);
-            labelPlayerProfit.Name = "labelPlayerProfit";
-            labelPlayerProfit.Size = new Size(71, 15);
-            labelPlayerProfit.TabIndex = 14;
-            labelPlayerProfit.Text = "Player Profit";
+            numericUpDownExtraPlayers.Location = new Point(501, 44);
+            numericUpDownExtraPlayers.Name = "numericUpDownExtraPlayers";
+            numericUpDownExtraPlayers.Size = new Size(120, 23);
+            numericUpDownExtraPlayers.TabIndex = 18;
+            numericUpDownExtraPlayers.ValueChanged += UpdateValues;
             // 
             // labelTotalProfitOutput
             // 
@@ -259,21 +273,26 @@
             labelTotalProfit.TabIndex = 16;
             labelTotalProfit.Text = "Total Profit";
             // 
-            // numericUpDownExtraPlayers
+            // labelPlayerProfitOutput
             // 
-            numericUpDownExtraPlayers.Location = new Point(501, 44);
-            numericUpDownExtraPlayers.Name = "numericUpDownExtraPlayers";
-            numericUpDownExtraPlayers.Size = new Size(120, 23);
-            numericUpDownExtraPlayers.TabIndex = 18;
+            labelPlayerProfitOutput.BackColor = SystemColors.Window;
+            labelPlayerProfitOutput.BorderStyle = BorderStyle.FixedSingle;
+            labelPlayerProfitOutput.Location = new Point(330, 194);
+            labelPlayerProfitOutput.Margin = new Padding(3);
+            labelPlayerProfitOutput.Name = "labelPlayerProfitOutput";
+            labelPlayerProfitOutput.Size = new Size(100, 23);
+            labelPlayerProfitOutput.TabIndex = 15;
+            labelPlayerProfitOutput.Text = "0.00";
+            labelPlayerProfitOutput.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // labelExtraPlayers
+            // labelPlayerProfit
             // 
-            labelExtraPlayers.AutoSize = true;
-            labelExtraPlayers.Location = new Point(501, 23);
-            labelExtraPlayers.Name = "labelExtraPlayers";
-            labelExtraPlayers.Size = new Size(73, 15);
-            labelExtraPlayers.TabIndex = 19;
-            labelExtraPlayers.Text = "Extra Players";
+            labelPlayerProfit.AutoSize = true;
+            labelPlayerProfit.Location = new Point(330, 173);
+            labelPlayerProfit.Name = "labelPlayerProfit";
+            labelPlayerProfit.Size = new Size(71, 15);
+            labelPlayerProfit.TabIndex = 14;
+            labelPlayerProfit.Text = "Player Profit";
             // 
             // HarvestMemoryForm
             // 
