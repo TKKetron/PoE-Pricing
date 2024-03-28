@@ -45,8 +45,13 @@
             buttonHervestMemory = new Button();
             buttonMoneyStrats = new Button();
             panelPriceChecking = new Panel();
-            button1 = new Button();
+            buttonItems = new Button();
             buttonPriceChecking = new Button();
+            buttonBeasts = new Button();
+            buttonArbitrage = new Button();
+            buttonTemple = new Button();
+            buttonCrafting = new Button();
+            buttonMisc = new Button();
             panelMain.SuspendLayout();
             panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
@@ -110,7 +115,7 @@
             // panelExitBorder
             // 
             panelExitBorder.Dock = DockStyle.Bottom;
-            panelExitBorder.Location = new Point(0, 776);
+            panelExitBorder.Location = new Point(0, 829);
             panelExitBorder.Name = "panelExitBorder";
             panelExitBorder.Size = new Size(255, 2);
             panelExitBorder.TabIndex = 12;
@@ -127,7 +132,7 @@
             buttonExit.FlatStyle = FlatStyle.Flat;
             buttonExit.Font = new Font("MrsEavesSmallCaps", 18F);
             buttonExit.ForeColor = Color.LightGray;
-            buttonExit.Location = new Point(0, 778);
+            buttonExit.Location = new Point(0, 831);
             buttonExit.Margin = new Padding(5);
             buttonExit.Name = "buttonExit";
             buttonExit.Padding = new Padding(13, 0, 0, 0);
@@ -145,7 +150,7 @@
             panelExit.Controls.Add(buttonSaveAndExit);
             panelExit.Controls.Add(buttonSave);
             panelExit.Dock = DockStyle.Bottom;
-            panelExit.Location = new Point(0, 848);
+            panelExit.Location = new Point(0, 901);
             panelExit.Margin = new Padding(5);
             panelExit.Name = "panelExit";
             panelExit.Size = new Size(255, 165);
@@ -225,7 +230,7 @@
             buttonSettings.FlatStyle = FlatStyle.Flat;
             buttonSettings.Font = new Font("MrsEavesSmallCaps", 18F);
             buttonSettings.ForeColor = Color.LightGray;
-            buttonSettings.Location = new Point(0, 706);
+            buttonSettings.Location = new Point(0, 759);
             buttonSettings.Margin = new Padding(5);
             buttonSettings.Name = "buttonSettings";
             buttonSettings.Padding = new Padding(13, 0, 0, 0);
@@ -247,7 +252,7 @@
             buttonHelp.FlatStyle = FlatStyle.Flat;
             buttonHelp.Font = new Font("MrsEavesSmallCaps", 18F);
             buttonHelp.ForeColor = Color.LightGray;
-            buttonHelp.Location = new Point(0, 636);
+            buttonHelp.Location = new Point(0, 689);
             buttonHelp.Margin = new Padding(5);
             buttonHelp.Name = "buttonHelp";
             buttonHelp.Padding = new Padding(13, 0, 0, 0);
@@ -260,12 +265,17 @@
             // panelMoneyStrats
             // 
             panelMoneyStrats.BackColor = Color.FromArgb(51, 51, 51);
+            panelMoneyStrats.Controls.Add(buttonMisc);
+            panelMoneyStrats.Controls.Add(buttonCrafting);
+            panelMoneyStrats.Controls.Add(buttonTemple);
+            panelMoneyStrats.Controls.Add(buttonArbitrage);
+            panelMoneyStrats.Controls.Add(buttonBeasts);
             panelMoneyStrats.Controls.Add(buttonHervestMemory);
             panelMoneyStrats.Dock = DockStyle.Top;
             panelMoneyStrats.Location = new Point(0, 359);
             panelMoneyStrats.Margin = new Padding(5);
             panelMoneyStrats.Name = "panelMoneyStrats";
-            panelMoneyStrats.Size = new Size(255, 277);
+            panelMoneyStrats.Size = new Size(255, 330);
             panelMoneyStrats.TabIndex = 4;
             // 
             // buttonHervestMemory
@@ -315,7 +325,7 @@
             // panelPriceChecking
             // 
             panelPriceChecking.BackColor = Color.FromArgb(51, 51, 51);
-            panelPriceChecking.Controls.Add(button1);
+            panelPriceChecking.Controls.Add(buttonItems);
             panelPriceChecking.Dock = DockStyle.Top;
             panelPriceChecking.Location = new Point(0, 70);
             panelPriceChecking.Margin = new Padding(5);
@@ -323,25 +333,25 @@
             panelPriceChecking.Size = new Size(255, 219);
             panelPriceChecking.TabIndex = 2;
             // 
-            // button1
+            // buttonItems
             // 
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("MrsEavesSmallCaps", 12F);
-            button1.ForeColor = Color.LightGray;
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(5);
-            button1.Name = "button1";
-            button1.Padding = new Padding(47, 0, 0, 0);
-            button1.Size = new Size(255, 55);
-            button1.TabIndex = 7;
-            button1.Text = "Items";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
+            buttonItems.Dock = DockStyle.Top;
+            buttonItems.FlatAppearance.BorderSize = 0;
+            buttonItems.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonItems.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonItems.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonItems.FlatStyle = FlatStyle.Flat;
+            buttonItems.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonItems.ForeColor = Color.LightGray;
+            buttonItems.Location = new Point(0, 0);
+            buttonItems.Margin = new Padding(5);
+            buttonItems.Name = "buttonItems";
+            buttonItems.Padding = new Padding(47, 0, 0, 0);
+            buttonItems.Size = new Size(255, 55);
+            buttonItems.TabIndex = 7;
+            buttonItems.Text = "Items";
+            buttonItems.TextAlign = ContentAlignment.MiddleLeft;
+            buttonItems.UseVisualStyleBackColor = true;
             // 
             // buttonPriceChecking
             // 
@@ -365,6 +375,106 @@
             buttonPriceChecking.TextAlign = ContentAlignment.MiddleLeft;
             buttonPriceChecking.UseVisualStyleBackColor = false;
             buttonPriceChecking.Click += buttonPriceChecking_Click;
+            // 
+            // buttonBeasts
+            // 
+            buttonBeasts.Dock = DockStyle.Top;
+            buttonBeasts.FlatAppearance.BorderSize = 0;
+            buttonBeasts.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonBeasts.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonBeasts.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonBeasts.FlatStyle = FlatStyle.Flat;
+            buttonBeasts.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonBeasts.ForeColor = Color.LightGray;
+            buttonBeasts.Location = new Point(0, 55);
+            buttonBeasts.Margin = new Padding(5);
+            buttonBeasts.Name = "buttonBeasts";
+            buttonBeasts.Padding = new Padding(47, 0, 0, 0);
+            buttonBeasts.Size = new Size(255, 55);
+            buttonBeasts.TabIndex = 3;
+            buttonBeasts.Text = "Beasts";
+            buttonBeasts.TextAlign = ContentAlignment.MiddleLeft;
+            buttonBeasts.UseVisualStyleBackColor = true;
+            // 
+            // buttonArbitrage
+            // 
+            buttonArbitrage.Dock = DockStyle.Top;
+            buttonArbitrage.FlatAppearance.BorderSize = 0;
+            buttonArbitrage.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonArbitrage.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonArbitrage.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonArbitrage.FlatStyle = FlatStyle.Flat;
+            buttonArbitrage.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonArbitrage.ForeColor = Color.LightGray;
+            buttonArbitrage.Location = new Point(0, 110);
+            buttonArbitrage.Margin = new Padding(5);
+            buttonArbitrage.Name = "buttonArbitrage";
+            buttonArbitrage.Padding = new Padding(47, 0, 0, 0);
+            buttonArbitrage.Size = new Size(255, 55);
+            buttonArbitrage.TabIndex = 4;
+            buttonArbitrage.Text = "Arbitrage";
+            buttonArbitrage.TextAlign = ContentAlignment.MiddleLeft;
+            buttonArbitrage.UseVisualStyleBackColor = true;
+            // 
+            // buttonTemple
+            // 
+            buttonTemple.Dock = DockStyle.Top;
+            buttonTemple.FlatAppearance.BorderSize = 0;
+            buttonTemple.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonTemple.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonTemple.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonTemple.FlatStyle = FlatStyle.Flat;
+            buttonTemple.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonTemple.ForeColor = Color.LightGray;
+            buttonTemple.Location = new Point(0, 165);
+            buttonTemple.Margin = new Padding(5);
+            buttonTemple.Name = "buttonTemple";
+            buttonTemple.Padding = new Padding(47, 0, 0, 0);
+            buttonTemple.Size = new Size(255, 55);
+            buttonTemple.TabIndex = 5;
+            buttonTemple.Text = "Temples";
+            buttonTemple.TextAlign = ContentAlignment.MiddleLeft;
+            buttonTemple.UseVisualStyleBackColor = true;
+            // 
+            // buttonCrafting
+            // 
+            buttonCrafting.Dock = DockStyle.Top;
+            buttonCrafting.FlatAppearance.BorderSize = 0;
+            buttonCrafting.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonCrafting.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonCrafting.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonCrafting.FlatStyle = FlatStyle.Flat;
+            buttonCrafting.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonCrafting.ForeColor = Color.LightGray;
+            buttonCrafting.Location = new Point(0, 220);
+            buttonCrafting.Margin = new Padding(5);
+            buttonCrafting.Name = "buttonCrafting";
+            buttonCrafting.Padding = new Padding(47, 0, 0, 0);
+            buttonCrafting.Size = new Size(255, 55);
+            buttonCrafting.TabIndex = 6;
+            buttonCrafting.Text = "Crafting";
+            buttonCrafting.TextAlign = ContentAlignment.MiddleLeft;
+            buttonCrafting.UseVisualStyleBackColor = true;
+            // 
+            // buttonMisc
+            // 
+            buttonMisc.Dock = DockStyle.Top;
+            buttonMisc.FlatAppearance.BorderSize = 0;
+            buttonMisc.FlatAppearance.CheckedBackColor = Color.FromArgb(11, 11, 11);
+            buttonMisc.FlatAppearance.MouseDownBackColor = Color.FromArgb(11, 11, 11);
+            buttonMisc.FlatAppearance.MouseOverBackColor = Color.FromArgb(31, 31, 31);
+            buttonMisc.FlatStyle = FlatStyle.Flat;
+            buttonMisc.Font = new Font("MrsEavesSmallCaps", 12F);
+            buttonMisc.ForeColor = Color.LightGray;
+            buttonMisc.Location = new Point(0, 275);
+            buttonMisc.Margin = new Padding(5);
+            buttonMisc.Name = "buttonMisc";
+            buttonMisc.Padding = new Padding(47, 0, 0, 0);
+            buttonMisc.Size = new Size(255, 55);
+            buttonMisc.TabIndex = 7;
+            buttonMisc.Text = "Misc";
+            buttonMisc.TextAlign = ContentAlignment.MiddleLeft;
+            buttonMisc.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -416,7 +526,12 @@
         private Button buttonHervestMemory;
         private Button buttonMoneyStrats;
         private Panel panelPriceChecking;
-        private Button button1;
+        private Button buttonItems;
         private Button buttonPriceChecking;
+        private Button buttonCrafting;
+        private Button buttonTemple;
+        private Button buttonArbitrage;
+        private Button buttonBeasts;
+        private Button buttonMisc;
     }
 }
